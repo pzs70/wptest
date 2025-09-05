@@ -234,6 +234,16 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 @font-face{font-family:Cardo;font-style:italic;font-weight:400;font-display:fallback;src:url('https://pzs70.github.io/wptest/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2') format('woff2');}
 @font-face{font-family:Cardo;font-style:normal;font-weight:700;font-display:fallback;src:url('https://pzs70.github.io/wptest/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2') format('woff2');}
 </style>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#317EFB">
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js")
+      .then(() => console.log("Service Worker regisztrálva!"))
+      .catch(err => console.error("SW regisztráció sikertelen", err));
+  }
+</script>
+
 </head>
 
 <body class="home blog wp-embed-responsive wp-theme-twentytwentyfour">
