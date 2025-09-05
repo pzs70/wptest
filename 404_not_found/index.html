@@ -146,7 +146,16 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 </style>
 <link rel="https://api.w.org/" href="https://pzs70.github.io/wptest/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pzs70.github.io/wptest/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.8.2" />
-<script type="importmap" id="wp-importmap">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#317EFB">
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js")
+          .then(() => console.log("Service Worker regisztrálva!"))
+          .catch(err => console.error("SW regisztráció sikertelen", err));
+      }
+    </script>
+    <script type="importmap" id="wp-importmap">
 {"imports":{"@wordpress\/interactivity":"https:\/\/pzs70.github.io\/wptest\/wp-includes\/js\/dist\/script-modules\/interactivity\/index.min.js?ver=55aebb6e0a16726baffb"}}
 </script>
 <script type="module" src="https://pzs70.github.io/wptest/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=61572d447d60c0aa5240" id="@wordpress/block-library/navigation/view-js-module"></script>

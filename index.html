@@ -224,7 +224,16 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </style>
 <link rel="https://api.w.org/" href="https://pzs70.github.io/wptest/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pzs70.github.io/wptest/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.8.2">
-<script type="importmap" id="wp-importmap">
+    <link rel="manifest" href="https://pzs70.github.io/wptest/manifest.json">
+    <meta name="theme-color" content="#317EFB">
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js")
+          .then(() => console.log("Service Worker regisztr&aacute;lva!"))
+          .catch(err => console.error("SW regisztr&aacute;ci&oacute; sikertelen", err));
+      }
+    </script>
+    <script type="importmap" id="wp-importmap">
 {"imports":{"@wordpress\/interactivity":"https:\/\/pzs70.github.io\/wptest\/wp-includes\/js\/dist\/script-modules\/interactivity\/index.min.js?ver=55aebb6e0a16726baffb"}}
 </script>
 <script type="module" src="https://pzs70.github.io/wptest/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=61572d447d60c0aa5240" id="@wordpress/block-library/navigation/view-js-module"></script>
@@ -234,16 +243,6 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 @font-face{font-family:Cardo;font-style:italic;font-weight:400;font-display:fallback;src:url('https://pzs70.github.io/wptest/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2') format('woff2');}
 @font-face{font-family:Cardo;font-style:normal;font-weight:700;font-display:fallback;src:url('https://pzs70.github.io/wptest/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2') format('woff2');}
 </style>
-<link rel="manifest" href="https://pzs70.github.io/wptest/manifest.json">
-<meta name="theme-color" content="#317EFB">
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("https://pzs70.github.io/wptest/sw.js")
-      .then(() => console.log("Service Worker regisztrálva!"))
-      .catch(err => console.error("SW regisztráció sikertelen", err));
-  }
-</script>
-
 </head>
 
 <body class="home blog wp-embed-responsive wp-theme-twentytwentyfour">
