@@ -224,10 +224,10 @@ ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:
 </style>
 <link rel="https://api.w.org/" href="https://pzs70.github.io/wptest/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pzs70.github.io/wptest/xmlrpc.php?rsd">
 <meta name="generator" content="WordPress 6.8.2">
-    <link rel="manifest" href="https://pzs70.github.io/wptest/manifest.json">
+    <link rel="manifest" href="https://pzs70.github.io/wptest/wptest/manifest.json">
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js')
+        navigator.serviceWorker.register('/wptest/sw.js', {scope: '/wptest/'})
           .then(reg => console.log("Service Worker registered", reg))
           .catch(err => console.error("Service Worker registration failed", err));
       }
