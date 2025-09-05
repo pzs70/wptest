@@ -146,13 +146,12 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 </style>
 <link rel="https://api.w.org/" href="https://pzs70.github.io/wptest/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pzs70.github.io/wptest/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.8.2" />
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#317EFB">
+    <link rel="manifest" href="./manifest.json">
     <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/wptest/sw.js")
-          .then(() => console.log("Service Worker regisztrálva!"))
-          .catch(err => console.error("SW regisztráció sikertelen", err));
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log("Service Worker registered", reg))
+          .catch(err => console.error("Service Worker registration failed", err));
       }
     </script>
     <script type="importmap" id="wp-importmap">
